@@ -1,36 +1,38 @@
 package suanfa_string1;
 
-import java.util.Scanner;
 
-import suanfa.s_function;
-import suanfa.s_function1;
+import Search.BinarySearch;
+import src.LinearList.LinkList;
+import suanfa.*;
+
 
 public class Main {
      public static void main(String[] args){
-    	 while(true)
-    	 {
-         s_function function;
-    	 System.out.println("请输入一串字母字串");
-    	 Scanner sysin=new Scanner(System.in);
-    	 String string= sysin.nextLine();
-    	 System.out.println("选择你要的算法操作：");
-    	 System.out.println("1.找出连续的递增字串");
-    	 System.out.println("2.找出递增字串");
-         Scanner getOption= new Scanner(System.in);
-         int d=0;
-         if(getOption.hasNextInt()) d=getOption.nextInt();
-         switch(d)
-         {
-         case 1:
-         {
-        	 function=new s_function1();
-        	 function.operation(string);
-        	 System.out.println("连续递增字串为："+function.getValue());
-        	 break;
+		 System.out.println(new BubbleSort().sort());
+         new QuickSort().sort();
+         new StriaghtSort().sort();
+         new mianshi1().printf();
+         new ShellSort().printf();
+         new StraightChooseSort().printf();
+         if(new BinarySearch().BeginSearch(4)){
+             System.out.println("find the item");
          }
-         case 2:
-        	 break;
+         else{
+             System.out.println("not found the item");
          }
-    	 }
+
+         LinkList<Integer> linkedList = new LinkList<Integer>();
+         for(int i = 0; i< 6;i++){
+             linkedList.add(i,i);
+         }
+         System.out.println(linkedList.toString());
+         linkedList.remove(2);
+         System.out.println(linkedList.toString());
+         linkedList.changed();
+         System.out.println(linkedList.set(3, 1));
+         System.out.println(linkedList.toString());
+         System.out.println(linkedList.size());
+         linkedList.clear();
+         System.out.println(linkedList.toString());
      }
 }
