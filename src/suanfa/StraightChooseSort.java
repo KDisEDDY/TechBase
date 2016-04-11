@@ -17,7 +17,7 @@ public class StraightChooseSort implements printInterface {
                     int temp = currentSmallItem;
                     currentSmallItem = List[x];
                     List[x] = temp;
-                }
+            }
             }
             if(List[i] != currentSmallItem){
                 List[i] = currentSmallItem;

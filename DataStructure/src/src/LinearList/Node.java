@@ -6,9 +6,9 @@ package src.LinearList;
  */
 public class Node<E> {
     public E element ;
-    public Node next ;
+    public Node<E> next ;
 
-    public Node(E element,Node next){
+    public Node(E element,Node<E> next){
         this.element = element;
         this.next = next;
     }

@@ -1,7 +1,8 @@
 package suanfa;
 
 /**
- * Created by Administrator on 2016/3/6.
+ * 归并排序
+ * Created by Eddy on 2016/3/6.
  */
 public class MergeSort implements printInterface {
 

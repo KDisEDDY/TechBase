@@ -1,10 +1,12 @@
 package src.LinearList;
 
+import java.util.Iterator;
+
 /**
- * 单链表类
+ * 单链表类,head元素为链表的第一个值
  * Created by Eddy on 2016/3/8.
  */
-public class LinkList<E> implements LList<E> {
+public class LinkList<E> implements LList<E> ,Iterable<E>{
     Node<E> head;
     int number = 0;
 
@@ -94,6 +96,7 @@ public class LinkList<E> implements LList<E> {
             if(index == 0){
                E element = head.element;
                 head = head.next;
+                return element;
             }
             else{
                 Node<E> p = this.head;
@@ -120,7 +123,7 @@ public class LinkList<E> implements LList<E> {
     }
 
     public boolean changed(){
-        Node<E> p = head,front = null, q = null;
+        Node<E> p = head,front = null, q;
         while(p != null){
             q = p.next;
             p.next = front;
@@ -133,14 +136,44 @@ public class LinkList<E> implements LList<E> {
 
     public String toString(){
         String str = "(";
-        Node<E> p = this.head;
-        while(p!= null){
-            str += p.element.toString();
-            p= p.next;
-            if(p != null){
-                str += ".";
-            }
+//        Node<E> p = this.head;
+//        while(p!= null){
+//            str += p.element.toString();
+//            p= p.next;
+//            if(p != null){
+//                str += ".";
+//            }
+//        }
+
+        Iterator<E> itr = new iterator();
+        while(itr.hasNext()){
+            str += itr.next() + ",";
         }
         return str += ")";
+    }
+
+    @Override
+    public Iterator<E> iterator() {
+        return new iterator();
+    }
+
+    private class iterator implements Iterator<E>{
+
+        private Node<E> cursor = head;
+
+        @Override
+        public boolean hasNext() {
+            return cursor != null ;
+        }
+
+        @Override
+        public E next() {
+            if(cursor != null ){
+                E element = cursor.element;
+                cursor = cursor.next;
+                return element;
+            }
+            return null;
+        }
     }
 }

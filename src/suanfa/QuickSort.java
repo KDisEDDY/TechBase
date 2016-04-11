@@ -14,7 +14,7 @@ public class QuickSort {
         for (int x : List){
             buffer.append(x + " ");
         }
-        System.out.println(buffer.toString().trim());
+        System.out.println("quickSort : " + buffer.toString().trim());
     }
 
     private void quickSort(int[] list , int first ,int last){
@@ -28,7 +28,7 @@ public class QuickSort {
     private int check(int[] list, int first,int last){
         int pivot = list[first];
         int high = last;
-        int low = first + 1;
+        int low = first ;
 
         while(high > low){
             while(low <= high && list[low] <= pivot){
