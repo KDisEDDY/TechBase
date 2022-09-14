@@ -1,4 +1,4 @@
-package suanfa;
+package algorithm;
 
 /**
  * 归并排序

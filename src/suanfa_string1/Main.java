@@ -4,7 +4,7 @@ package suanfa_string1;
 import Search.BinarySearch;
 import StringMatch.BruteForce;
 import src.LinearList.LinkList;
-import suanfa.*;
+import algorithm.*;
 
 
 

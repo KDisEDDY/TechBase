@@ -1,4 +1,4 @@
-package suanfa;
+package algorithm;
 
 
 /**

@@ -1,4 +1,4 @@
-package suanfa;
+package algorithm;
 
 /**
  * Created by Eddy on 2016/3/2.

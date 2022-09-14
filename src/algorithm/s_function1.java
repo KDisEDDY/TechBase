@@ -1,4 +1,4 @@
-package suanfa;
+package algorithm;
 
 public class s_function1 extends s_function {
      public void operation(String string)
