@@ -6,6 +6,7 @@ import StringMatch.BruteForce;
 import src.LinearList.LinkList;
 import algorithm.*;
 
+import java.util.Arrays;
 
 
 public class Main {
@@ -41,5 +42,16 @@ public class Main {
          char[] cs = {'5','3','5','7','2','1','2','5','2'};
          new mianshi2().findout(cs);
 
+
+         RemoveDuplicates removeDuplicatesFunction = new RemoveDuplicates();
+         int[] nums = new int[7];
+         nums[0] = 1;
+         nums[1] = 1;
+         nums[2] = 1;
+         nums[3] = 1;
+         nums[4] = 2;
+         nums[5] = 2;
+         nums[6] = 3;
+         System.out.println("the new array size is " + removeDuplicatesFunction.removeDuplicates(nums));
      }
 }
